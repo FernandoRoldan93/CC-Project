@@ -39,7 +39,7 @@ You can also check all your tracked repositories with the next line:
 git remote -v
 ```
 ## Configuring git options
-In this part we are going to configure the default options or settings of our local installation of git. This configuration will include name, email and rebase as default.
+In this part we are going to configure the default options or settings of our local installation of git. This configuration will include name, email and rebase as default. By adding them we are telling Github who is sending the changes.
 
 This three settings can be done with the following lines:
 ```
@@ -48,5 +48,13 @@ git config --global user.email name@example.com
 git config --global pull.rebase true
 ```
 In case we only want to add the rebase option to one repository we just has to change the "--global" option for "--local"
+
+## Two Factors authentication
+The last step, but not the less important, is to add a two-factor authentication method to our Github account. This will add another security layer to our account so I highly recommend to add it to your account. To do so you only have to navigate to your Github account and then go to settings > Account security and press in the **Enable two-factor authentication** button. Then chose between the option you want and continue, from here is just a matter of press **next** buttons.
+
+![Two-factor-auth](./img/Two-factor-auth.png)
+
+![Two-factor-auth-enable](./img/Two-factor-auth-enable.png)
+
 
 With this, all the necessary configuration is done and we can start working in our project.
