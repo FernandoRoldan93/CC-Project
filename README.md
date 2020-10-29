@@ -1,4 +1,4 @@
-# CC-Project
+# UrbanBike
 This repository will be used to develop the final project for the subject cloud computing. Parallel to this project some self evaluation problem will be solved in their own repository that can be found [here](https://github.com/FernandoRoldan93/Ejercicios-CC).
 
 You can find how I configured the local machine and the whole environment for the subject in the document created for that purpose. You can find it following this [link](./doc/repository_preparation.md).
