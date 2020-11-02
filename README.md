@@ -3,6 +3,6 @@ This repository will be used to develop the final project for the subject cloud 
 
 # Index
 * [Github and repository configuration](./doc/repository_preparation.md).
-* Problem and proposed solution
+* [Problem and proposed solution](./doc/problem_definition.md)
 * Tools
 * Roadmap
