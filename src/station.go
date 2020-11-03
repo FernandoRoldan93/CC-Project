@@ -28,3 +28,27 @@ func (s Station) bool check_bikes(){
   }
   return result
 }
+
+func (s Station) string rent_bike(){
+  result := ""
+  if check_bikes(s) == true {
+    s.available_bikes--
+    s.free_slots++
+    result = "1: ok "
+  } else {
+    result = "0: ERROR, There are not any bike to rent"
+  }
+  return result
+}
+
+func (s Station) string store_bike(){
+  result := ""
+  if check_free_slots(s) == true {
+    s.available_bikes++
+    s.free_slots--
+    result = "1: ok "
+  } else {
+    result = "0: ERROR, There are not any free slot"
+  }
+  return result
+}
