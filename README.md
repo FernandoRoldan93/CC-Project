@@ -34,3 +34,9 @@ In order to have a structure to follow or a general guide of the project, you wi
 4. [Dockerize the project](https://github.com/FernandoRoldan93/UrbanBike/milestone/6): Compression of the system in containers that will allow to deploy it easily on any machine.
 
 5. [Deploy](https://github.com/FernandoRoldan93/UrbanBike/milestone/7): Once we have the system in a container we can deploy it in any cloud provider of our choice.
+
+## Code structure
+
+In this application, all the code will be placed, as usual, in the ['src' folder](./src) and at the moment there are only 2 classes implemented partially. Those classes are [Station](./src/station/station.go) and [City](./src/station/city.go).
+
+The different modules will be developed and placed in folders representing their packages, an example can be found in the classes listed above. That code has been tested syntactically using 'gofmt -e <.go file>' and 'go build' trying to check for possible errors and syntax errors.
