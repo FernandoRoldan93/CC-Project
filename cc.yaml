@@ -1,4 +1,3 @@
-entities:
+entidades:
   - src/city/city.go
   - src/station/station.go
-  
