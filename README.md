@@ -10,7 +10,11 @@ This repository will be used to develop the final project for the subject cloud 
 
 ## Architecture
 
-After some study and research I have decided that the best Architecture for this project should be one based on microservices. There are several reasons for choose this Architecture, being all of them based on the advantages of this architecture. A further explanation can be found on the [document](./doc/architecture.md) created for that purpose.
+After some study and research I have decided that the best architecture for this project should be one based on microservices. The reasons to choose this architecture comes from its advantages. For example, with this type of architecture we have different microservices, taking each one control of one feature of the system. This allow us to take some of the features as critical, for example, the management of the bike stations. This feature is one of the main features of the system and has to be operative most part of the time. Being an isolated microservice, it would be easier to recover it in case of failure or to scale it.
+
+Looking at the rest of possible architectures, they does not fit for our project. Talking more specifically, about the multilayer architecture, the main problem in this kind of architectures, is that they are difficult to scale, being the scalability a requirement of the project: this kind of city transport has a lot of users and depending to the cities that we will give service, the number of users and the amount of information to handle can grow very fast.
+About the event driven architecture, the problem is that testing and development are harder in this architecture and we need to have in mind that testing is a key part of the development: we cannot deploy something that has not been tested properly. Microkernel architecture does not fit here neither: even if we have a main feature (station management, for example), it is not the *core* of the system. And the last architecture that was taken in consideration was a monolithic one. Nevertheless this architecture provides a lot of disadvantages to the system, as for example, the difficulty to scale the project or even to maintain it.
+
 
 ## Tools
 

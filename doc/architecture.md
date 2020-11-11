@@ -1,19 +1,5 @@
 # Architecture
-After some study and research I have decided that the best Architecture for this project should be one based on microservices. There are several reasons for choose this Architecture, being all of them based on the advantages of this architecture:
-* Microservices independence: In this service there will be some clearly separated functions, being the most important to give the users information about bike stations. Some other functions are important to, for example, to update the stations occupancy or a possible future function for print tickets when a user takes a bike for its rental. Anyway, any of these functions are independent, not needing any of the other functions to work.
+After some study and research I have decided that the best architecture for this project should be one based on microservices. The reasons to choose this architecture comes from its advantages. For example, with this type of architecture we have different microservices, taking each one control of one feature of the system. This allow us to take some of the features as critical, for example, the management of the bike stations. This feature is one of the main features of the system and has to be operative most part of the time. Being an isolated microservice, it would be easier to recover it in case of failure or to scale it.
 
-* Scalability: Being independent, these microservices are easier to maintain and easier to scale.
-
-* Availability of future upgrades: With a microservices based architecture, it is easier to create new functions for the app. This easiness came from the fact that microservices are isolated and independent, there are not going to be problems about integration between them.
-
-A first approach to the microservices that will be used is listed below:
-
-1. Bike Stations: This microservice will be used to list and modify the information about bike stations. Clients will connect to this microservice to get information, like free slots, of a specified station.
-
-2. City data: This microservice will allow users to get info about where and how many bike stations are in their city.
-
-3. *Telegram Bot:* This microservice would allow clients to get info about an specified station throw Telegram application. The development of this module could be discarded.
-
-4. Configuration management: This microservice will be the responsible for the storage of the configuration. This will allow us to have the modules configuration in the same place.
-
-5. Data store: In this microservice, all the data will be stored. The other microservices will request the information they need to this module.
+Looking at the rest of possible architectures, they does not fit for our project. Talking more specifically, about the multilayer architecture, the main problem in this kind of architectures, is that they are difficult to scale, being the scalability a requirement of the project: this kind of city transport has a lot of users and depending to the cities that we will give service, the number of users and the amount of information to handle can grow very fast.
+About the event driven architecture, the problem is that testing and development are harder in this architecture and we need to have in mind that testing is a key part of the development: we cannot deploy something that has not been tested properly. Microkernel architecture does not fit here neither: even if we have a main feature (station management, for example), it is not the *core* of the system. And the last architecture that was taken in consideration was a monolithic one. Nevertheless this architecture provides a lot of disadvantages to the system, as for example, the difficulty to scale the project or even to maintain it.
