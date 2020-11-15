@@ -22,25 +22,17 @@ A lot of different tools will be used in the development of this project. These 
 
 ## Roadmap
 
-In order to have a structure to follow or a general guide of the project, you will find in the next lines a roadmap of the project. This roadmap will give information about what are going to be the steps of the project development. Almost every point or step will be related to one [milestone](https://github.com/FernandoRoldan93/UrbanBike/milestones) of the project. You can find further information and a list of issues on each one of the milestone pages.
+In order to have a structure to follow or a general guide of the project, you will find in the next lines a roadmap of the project. This roadmap will give information about what are going to be the steps of the system development. Almost every point or step will be related to one [milestone](https://github.com/FernandoRoldan93/UrbanBike/milestones) of the project.
 
-1. [Architecture definition](https://github.com/FernandoRoldan93/UrbanBike/milestone/2): As a first step we have to choose what architecture will have the application.
+* [Handle information requests about stations](https://github.com/FernandoRoldan93/UrbanBike/milestone/9): The main objective of this milestone will be to be able to get information requests about stations and to retrieve information the requested data through an API. This involve the creation and management of the diferent data structures that will be used. To be able of do that, we also need to create a way of add/delete/modify the data that will be given through the API.
+  *
 
-2. [Development of the different modules](https://github.com/FernandoRoldan93/UrbanBike/milestone/3): This step will be parallel to the other ones, the reason is that we can always add more modules or functionalities to the project. This also include the development of the different tests on each of the modules that requires it. But in any case this step will include, at least, the next parts:
-  * Station class
-  * City class
-  * [External API reader](https://github.com/FernandoRoldan93/UrbanBike/milestone/5)
-  * Data storage
-  * Configuration module
+* [Handle information requests about cities](https://github.com/FernandoRoldan93/UrbanBike/milestone/10): Similar to the previous milestone, in this case we will get requests about cities, giving as responses data like number of stations, position and maximum distance between stations through another API.
 
-3. [Continuous Integration](https://github.com/FernandoRoldan93/UrbanBike/milestone/8): Adding tools that will allow to check all the tests after every change on the system.
-
-4. [Dockerize the project](https://github.com/FernandoRoldan93/UrbanBike/milestone/6): Compression of the system in containers that will allow to deploy it easily on any machine.
-
-5. [Deploy](https://github.com/FernandoRoldan93/UrbanBike/milestone/7): Once we have the system in a container we can deploy it in any cloud provider of our choice.
+* [Telegram bot](https://github.com/FernandoRoldan93/UrbanBike/milestone/11): With this milestone we are going to make another way of request information to the system, this solution will consist on a telegram bot, where a user can request information like the occupancy of a station. This will make easier to the users, to check information about the stations and cities. It will be independent of the previous milestones, being this solution an alternative way to access the data. This will give redundancy, but also robustness on API failures.
 
 ## Code structure
 
 In this application, all the code will be placed, as usual, in the ['src' folder](./src) and at the moment there are only 2 classes implemented partially. Those classes are [Station](./src/station/station.go) and [City](./src/station/city.go).
 
-The different modules will be developed and placed in folders representing their packages, an example can be found in the classes listed above. That code has been tested syntactically using 'gofmt -e <.go file>' and 'go build' trying to check for possible errors and syntax errors.
+The different modules will be developed and placed in folders representing their packages, an example can be found in the classes listed above. That code has been tested syntactically using ```gofmt -e <.go file>``` and ```go build``` trying to check for possible errors and syntax errors.
