@@ -25,11 +25,20 @@ A lot of different tools will be used in the development of this project. These 
 In order to have a structure to follow or a general guide of the project, you will find in the next lines a roadmap of the project. This roadmap will give information about what are going to be the steps of the system development. Almost every point or step will be related to one [milestone](https://github.com/FernandoRoldan93/UrbanBike/milestones) of the project.
 
 * [Handle information requests about stations](https://github.com/FernandoRoldan93/UrbanBike/milestone/9): The main objective of this milestone will be to be able to get information requests about stations and to retrieve information the requested data through an API. This involve the creation and management of the diferent data structures that will be used. To be able of do that, we also need to create a way of add/delete/modify the data that will be given through the API.
-  *
+  * [[US1] Get specific station position](https://github.com/FernandoRoldan93/UrbanBike/issues/7)
+  * [[US3] Check the occupation for a bike station](https://github.com/FernandoRoldan93/UrbanBike/issues/9)
+  * [[US4] Renting a bike](https://github.com/FernandoRoldan93/UrbanBike/issues/17)
+  * [[US5] Park a bike in a station](https://github.com/FernandoRoldan93/UrbanBike/issues/18)
+
 
 * [Handle information requests about cities](https://github.com/FernandoRoldan93/UrbanBike/milestone/10): Similar to the previous milestone, in this case we will get requests about cities, giving as responses data like number of stations, position and maximum distance between stations through another API.
+  * [[US2] Request information about a specific city](https://github.com/FernandoRoldan93/UrbanBike/issues/8)
+  * [[US6] Check nearest station](https://github.com/FernandoRoldan93/UrbanBike/issues/11)
+  * [[US7] Point the location of all the stations in a map](https://github.com/FernandoRoldan93/UrbanBike/issues/12)
+
 
 * [Telegram bot](https://github.com/FernandoRoldan93/UrbanBike/milestone/11): With this milestone we are going to make another way of request information to the system, this solution will consist on a telegram bot, where a user can request information like the occupancy of a station. This will make easier to the users, to check information about the stations and cities. It will be independent of the previous milestones, being this solution an alternative way to access the data. This will give redundancy, but also robustness on API failures.
+  * [[US8] Check for nearest bike stations through Telegram](https://github.com/FernandoRoldan93/UrbanBike/issues/14)
 
 ## Code structure
 
