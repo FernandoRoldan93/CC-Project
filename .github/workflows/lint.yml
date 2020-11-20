@@ -3,18 +3,29 @@ name: Lint
 on: push
 
 jobs:
-  run-linters:
-    name: Run linters
+  build:
+    # Name the Job
+    name: Linter
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Git repository
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
         uses: actions/checkout@v2
-
-      # Install your linters here
-
-      - name: Run linters
-        uses: jacobtomlinson/gha-lint-yaml@master
         with:
-          path: "."
-          # Enable your linters here
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: github/super-linter@v3
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_GO: true
+          VALIDATE_YAML: true
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
