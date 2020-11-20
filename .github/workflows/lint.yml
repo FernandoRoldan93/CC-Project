@@ -18,6 +18,7 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
       - run: go env -w GOPATH="$(pwd)"
+          go env GOPATH
 
       ################################
       # Run Linter against code base #
