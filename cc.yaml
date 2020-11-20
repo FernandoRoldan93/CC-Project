@@ -1,4 +1,4 @@
 ---
 entidad:
-  - src/city/city.go
+  - src/bike/bike.go
   - src/station/station.go
