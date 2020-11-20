@@ -29,4 +29,4 @@ jobs:
           VALIDATE_YAML: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOPATH: $(pwd)
+          GOPATH: /github/workspace/
