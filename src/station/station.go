@@ -3,7 +3,7 @@ package station
 import "fmt"
 
 type Station struct {
-	id             string
+	id             int
 	adr            string
 	city           string
 	totalSlots     int
@@ -32,7 +32,7 @@ func checkFreeSlots(s Station) bool {
 	// 	result = true
 	// }
 	// return result
-	return ""
+	return false
 }
 
 func checkBikes(s Station) bool {
