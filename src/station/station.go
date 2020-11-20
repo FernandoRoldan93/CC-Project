@@ -11,7 +11,7 @@ type Station struct {
 	freeSlots      int
 }
 
-func init(id int, adr string, city string, totalSlots int) *Station{
+func constructor(id int, adr string, city string, totalSlots int) *Station{
   s := new(Station)
   s.id = id
   s.adr = adr
@@ -32,6 +32,7 @@ func checkFreeSlots(s Station) bool {
 	// 	result = true
 	// }
 	// return result
+	return ""
 }
 
 func checkBikes(s Station) bool {
@@ -40,6 +41,7 @@ func checkBikes(s Station) bool {
 	// 	result = true
 	// }
 	// return result
+	return false
 }
 
 func rentBike(s Station) string {
@@ -52,6 +54,7 @@ func rentBike(s Station) string {
 	// 	result = "0: ERROR, There are not any bike to rent"
 	// }
 	// return result
+	return ""
 }
 
 func storeBike(s Station) string {
@@ -64,4 +67,5 @@ func storeBike(s Station) string {
 	// 	result = "0: ERROR, There are not any free slot"
 	// }
 	// return result
+	return ""
 }

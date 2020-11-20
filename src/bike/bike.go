@@ -13,7 +13,7 @@ type Bike struct{
   stationId int
 }
 
-func init(id int, sId int) *Bike{
+func constructor(id int, sId int) *Bike{
   bike := new(Bike)
   bike.id = id
   bike.stationId = sId
