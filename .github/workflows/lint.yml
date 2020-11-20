@@ -16,5 +16,5 @@ jobs:
       - name: Run linters
         uses: jacobtomlinson/gha-lint-yaml@master
         with:
-          github_token: ${{ secrets.github_token }}
+          path: "."
           # Enable your linters here
