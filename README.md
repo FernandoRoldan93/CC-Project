@@ -43,6 +43,6 @@ In order to have a structure to follow or a general guide of the project, you wi
 
 ## Code structure
 
-In this application, all the code will be placed, as usual, in the ['src' folder](./src) and at the moment there are only 2 classes implemented partially. Those classes are [Station](./src/station/station.go) and [City](./src/station/city.go).
+In this application, all the code will be placed, as usual, in the ['src' folder](./src) and at the moment there are only 2 classes implemented partially. Those classes are [Station](./src/station/station.go) and [Bike](./src/bike/bike.go).
 
-The different modules will be developed and placed in folders representing their packages, an example can be found in the classes listed above. That code has been tested syntactically using ```gofmt -e <.go file>``` and ```go build``` trying to check for possible errors and syntax errors.
+The different modules will be developed and placed in folders representing their packages, an example can be found in the classes listed above. That code has been tested syntactically using ```gofmt -e <.go file>``` and ```go build``` trying to check for possible errors and syntax errors. The `gofmt` command will run automatically in a Github Action. This action will also run a linter on the YAML files trying to look for syntax errors.
