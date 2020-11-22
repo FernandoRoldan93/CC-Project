@@ -36,4 +36,4 @@ jobs:
         uses: Jerome1337/gofmt-action@v1.0.2
         with:
           gofmt-path: './src'
-          args: '-l -d'
+          args: '-d'
