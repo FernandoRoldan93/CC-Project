@@ -11,15 +11,15 @@ type Station struct {
 	freeSlots      int
 }
 
-func constructor(id int, adr string, city string, totalSlots int) *Station{
-  s := new(Station)
-  s.id = id
-  s.adr = adr
-  s.city = city
+func constructor(id int, adr string, city string, totalSlots int) *Station {
+	s := new(Station)
+	s.id = id
+	s.adr = adr
+	s.city = city
 	s.totalSlots = totalSlots
 	s.availableBikes = 0 //at creation, a station will be out of bikes
 	s.freeSlots = totalSlots
-  return s
+	return s
 }
 
 func (s Station) String() string {
