@@ -21,12 +21,19 @@ jobs:
       ################################
       # Run Linter against code base #
       ################################
-      - name: Lint Code Base
+      - name: Lint YAML
         uses: github/super-linter@v3
         env:
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_GO: true
+          VALIDATE_ALL_CODEBASE: false # Being false it will analyse only the files that has been pushed not all the repo
           VALIDATE_YAML: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOPATH: /github/workspace/
+          
+        #############################
+        # Check go format           #
+        #############################
+      - name: Gofmt
+        uses: Jerome1337/gofmt-action@v1.0.2
+        with:
+          gofmt-path: './src'
+          gofmt-flags: '-l -d'

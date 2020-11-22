@@ -17,13 +17,7 @@ issues:
 linters:
   enable:
     - golint
-    #- gosec
-    #- unconvert
-    #- gocyclo
-    #- goconst
-    #- maligned
-    #- gocritic
-    #- goimports
+    
 linters-settings:
   errcheck:
     # report about assignment of errors to blank identifier: `num, _ := strconv.Atoi(numStr)`;
