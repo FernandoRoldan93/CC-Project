@@ -26,9 +26,9 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false # Being false it will analyse only the files that has been pushed not all the repo
           VALIDATE_YAML: true
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
         #############################
         # Check go format           #
         #############################
